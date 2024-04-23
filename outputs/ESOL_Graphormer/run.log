@@ -1,0 +1,267 @@
++-------------------+-----------------+
+|     Parameter     |      Value      |
++===================+=================+
+| Edge dim          | 128             |
++-------------------+-----------------+
+| Epochs            | 100             |
++-------------------+-----------------+
+| Exp name          | ESOL_Graphormer |
++-------------------+-----------------+
+| Gpu index         | 0               |
++-------------------+-----------------+
+| Lr                | 0.0005          |
++-------------------+-----------------+
+| Max in degree     | 5               |
++-------------------+-----------------+
+| Max out degree    | 5               |
++-------------------+-----------------+
+| Max path distance | 5               |
++-------------------+-----------------+
+| Node dim          | 128             |
++-------------------+-----------------+
+| Num heads         | 4               |
++-------------------+-----------------+
+| Num layers        | 3               |
++-------------------+-----------------+
+| Output dim        | 1               |
++-------------------+-----------------+
+| Seed              | 16              |
++-------------------+-----------------+
+| Test batch size   | 64              |
++-------------------+-----------------+
+| Train batch size  | 64              |
++-------------------+-----------------+
+Using GPU: 0
+Graphormer(
+  (node_in_lin): Linear(in_features=9, out_features=128, bias=True)
+  (edge_in_lin): Linear(in_features=3, out_features=128, bias=True)
+  (centrality_encoding): CentralityEncoding()
+  (spatial_encoding): SpatialEncoding()
+  (layers): ModuleList(
+    (0-2): 3 x GraphormerEncoderLayer(
+      (attention): GraphormerMultiHeadAttention(
+        (heads): ModuleList(
+          (0-3): 4 x GraphormerAttentionHead(
+            (edge_encoding): EdgeEncoding()
+            (q): Linear(in_features=128, out_features=128, bias=True)
+            (k): Linear(in_features=128, out_features=128, bias=True)
+            (v): Linear(in_features=128, out_features=128, bias=True)
+          )
+        )
+        (linear): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (ln_1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (ln_2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (ff): Linear(in_features=128, out_features=128, bias=True)
+    )
+  )
+  (node_out_lin): Linear(in_features=128, out_features=1, bias=True)
+)
+Model Parameter: 853382
+Using AdamW
+
+Epoch #000, Train_Loss: 2.099473
+
+Epoch #001, Train_Loss: 1.418126
+
+Epoch #002, Train_Loss: 1.389455
+
+Epoch #003, Train_Loss: 1.323193
+
+Epoch #004, Train_Loss: 1.300928
+
+Epoch #005, Train_Loss: 1.307095
+
+Epoch #006, Train_Loss: 1.153577
+
+Epoch #007, Train_Loss: 1.254053
+
+Epoch #008, Train_Loss: 1.147663
+
+Epoch #009, Train_Loss: 1.097274
+
+Epoch #010, Train_Loss: 1.252770
+
+Epoch #011, Train_Loss: 1.311794
+
+Epoch #012, Train_Loss: 1.067735
+
+Epoch #013, Train_Loss: 1.074379
+
+Epoch #014, Train_Loss: 0.923499
+
+Epoch #015, Train_Loss: 1.024909
+
+Epoch #016, Train_Loss: 0.956855
+
+Epoch #017, Train_Loss: 0.869839
+
+Epoch #018, Train_Loss: 0.827314
+
+Epoch #019, Train_Loss: 0.850850
+
+Epoch #020, Train_Loss: 0.798955
+
+Epoch #021, Train_Loss: 0.791132
+
+Epoch #022, Train_Loss: 0.819340
+
+Epoch #023, Train_Loss: 0.793801
+
+Epoch #024, Train_Loss: 0.805066
+
+Epoch #025, Train_Loss: 0.839954
+
+Epoch #026, Train_Loss: 0.770616
+
+Epoch #027, Train_Loss: 0.773172
+
+Epoch #028, Train_Loss: 0.843640
+
+Epoch #029, Train_Loss: 0.697365
+
+Epoch #030, Train_Loss: 0.716042
+
+Epoch #031, Train_Loss: 0.709665
+
+Epoch #032, Train_Loss: 0.665491
+
+Epoch #033, Train_Loss: 0.674416
+
+Epoch #034, Train_Loss: 0.694988
+
+Epoch #035, Train_Loss: 0.659064
+
+Epoch #036, Train_Loss: 0.668557
+
+Epoch #037, Train_Loss: 0.669683
+
+Epoch #038, Train_Loss: 0.782960
+
+Epoch #039, Train_Loss: 0.749961
+
+Epoch #040, Train_Loss: 0.691342
+
+Epoch #041, Train_Loss: 0.756359
+
+Epoch #042, Train_Loss: 0.724696
+
+Epoch #043, Train_Loss: 0.670417
+
+Epoch #044, Train_Loss: 0.643387
+
+Epoch #045, Train_Loss: 0.620170
+
+Epoch #046, Train_Loss: 0.619454
+
+Epoch #047, Train_Loss: 0.681570
+
+Epoch #048, Train_Loss: 0.625479
+
+Epoch #049, Train_Loss: 0.649205
+
+Epoch #050, Train_Loss: 0.616628
+
+Epoch #051, Train_Loss: 0.718557
+
+Epoch #052, Train_Loss: 0.700511
+
+Epoch #053, Train_Loss: 0.590610
+
+Epoch #054, Train_Loss: 0.595845
+
+Epoch #055, Train_Loss: 0.648944
+
+Epoch #056, Train_Loss: 0.579869
+
+Epoch #057, Train_Loss: 0.626968
+
+Epoch #058, Train_Loss: 0.612510
+
+Epoch #059, Train_Loss: 0.583827
+
+Epoch #060, Train_Loss: 0.613125
+
+Epoch #061, Train_Loss: 0.634426
+
+Epoch #062, Train_Loss: 0.624098
+
+Epoch #063, Train_Loss: 0.570936
+
+Epoch #064, Train_Loss: 0.606894
+
+Epoch #065, Train_Loss: 0.596760
+
+Epoch #066, Train_Loss: 0.564906
+
+Epoch #067, Train_Loss: 0.560287
+
+Epoch #068, Train_Loss: 0.589233
+
+Epoch #069, Train_Loss: 0.571880
+
+Epoch #070, Train_Loss: 0.576434
+
+Epoch #071, Train_Loss: 0.623798
+
+Epoch #072, Train_Loss: 0.747335
+
+Epoch #073, Train_Loss: 0.618293
+
+Epoch #074, Train_Loss: 0.602235
+
+Epoch #075, Train_Loss: 0.570753
+
+Epoch #076, Train_Loss: 0.574287
+
+Epoch #077, Train_Loss: 0.556680
+
+Epoch #078, Train_Loss: 0.582292
+
+Epoch #079, Train_Loss: 0.578033
+
+Epoch #080, Train_Loss: 0.618921
+
+Epoch #081, Train_Loss: 0.578285
+
+Epoch #082, Train_Loss: 0.529115
+
+Epoch #083, Train_Loss: 0.603582
+
+Epoch #084, Train_Loss: 0.567147
+
+Epoch #085, Train_Loss: 0.555202
+
+Epoch #086, Train_Loss: 0.549639
+
+Epoch #087, Train_Loss: 0.548440
+
+Epoch #088, Train_Loss: 0.525675
+
+Epoch #089, Train_Loss: 0.529801
+
+Epoch #090, Train_Loss: 0.532561
+
+Epoch #091, Train_Loss: 0.529512
+
+Epoch #092, Train_Loss: 0.554000
+
+Epoch #093, Train_Loss: 0.523037
+
+Epoch #094, Train_Loss: 0.527790
+
+Epoch #095, Train_Loss: 0.553041
+
+Epoch #096, Train_Loss: 0.600329
+
+Epoch #097, Train_Loss: 0.561612
+
+Epoch #098, Train_Loss: 0.598026
+
+Epoch #099, Train_Loss: 0.577474
+The current best model is saved in: ******** outputs/ESOL_Graphormer/model.pth *********
+
+********** TEST START **********
+Reload Best Model
+The current best model is saved in: ******** outputs/ESOL_Graphormer/model.pth *********
+TEST :: Test_Loss: 0.785497
